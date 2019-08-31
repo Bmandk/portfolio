@@ -1,25 +1,112 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/es/FormControl";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { LinkContainer } from 'react-router-bootstrap'
+
+class NavbarLink extends React.Component {
+    render() {
+        return (
+            <Nav.Item>
+                <LinkContainer to={this.props.link}>
+                    <Nav.Link>{this.props.text}</Nav.Link>
+                </LinkContainer>
+            </Nav.Item>
+        )
+    }
+}
+
+class MyNavbar extends React.Component {
+    const style =
+    render() {
+        return (
+            <Navbar bg="light" expand="lg">
+                <Container>
+                    <LinkContainer to="/">
+                        <Navbar.Brand>Jonathan Hertz</Navbar.Brand>
+                    </LinkContainer>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Nav>
+                        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                            <NavbarLink link="/" text="Home"/>
+                            <NavbarLink link="/about/" text="About"/>
+                        </Navbar.Collapse>
+                    </Nav>
+                </Container>
+            </Navbar>
+        );
+    }
+}
+
+class Frontpage extends React.Component {
+  render() {
+    return (
+        <Content>
+            <h1>Frontpage</h1>
+            <Project/>
+        </Content>
+    );
+  }
+}
+
+class Content extends React.Component {
+    render() {
+        return (
+            <Container className="content">
+                {this.props.children}
+            </Container>
+        )
+    }
+}
+
+class About extends React.Component {
+  render() {
+    return (
+        <Content>
+            <h1>About</h1>
+        </Content>
+    );
+  }
+}
+
+class Project extends React.Component {
+  render() {
+    return (
+        <a1>Test</a1>
+    );
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <MyNavbar/>
+        {/*<div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about/">About</Link>
+              </li>
+              <li>
+                <Link to="/users/">Users</Link>
+              </li>
+            </ul>
+          </nav>
+
+        </div>*/}
+        <Route path="/" exact component={Frontpage} />
+        <Route path="/about/" component={About} />
+      </Router>
   );
 }
 

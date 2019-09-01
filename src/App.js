@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.scss';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -13,10 +13,15 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 class NavbarLink extends React.Component {
     render() {
+        const style = {
+            link: {
+                color: 'white'
+            }
+        };
         return (
             <Nav.Item>
                 <LinkContainer to={this.props.link}>
-                    <Nav.Link>{this.props.text}</Nav.Link>
+                    <Nav.Link style={style}>{this.props.text}</Nav.Link>
                 </LinkContainer>
             </Nav.Item>
         )
@@ -24,10 +29,15 @@ class NavbarLink extends React.Component {
 }
 
 class MyNavbar extends React.Component {
-    const style =
     render() {
+        const style = {
+            navbar: {
+                backgroundColor: 'darkred'
+            },
+        };
+
         return (
-            <Navbar bg="light" expand="lg">
+            /*<Navbar style={style.navbar}>
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>Jonathan Hertz</Navbar.Brand>
@@ -40,7 +50,13 @@ class MyNavbar extends React.Component {
                         </Navbar.Collapse>
                     </Nav>
                 </Container>
-            </Navbar>
+            </Navbar>*/
+            <nav className="navbar">
+                <div className="left">
+                </div>
+                <div className="right">
+                </div>
+            </nav>
         );
     }
 }
@@ -79,7 +95,7 @@ class About extends React.Component {
 class Project extends React.Component {
   render() {
     return (
-        <a1>Test</a1>
+        <h1>Test</h1>
     );
   }
 }

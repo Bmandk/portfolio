@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c73ac7d7-5014-4e9e-979d-155acd3dec99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="561">
+              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="799">
+              <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -94,8 +94,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\portfolio\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -125,17 +128,18 @@
       <workItem from="1567067632457" duration="4653000" />
       <workItem from="1567072873380" duration="10530000" />
       <workItem from="1567156390084" duration="310000" />
+      <workItem from="1567240663566" duration="6980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15493000" />
+    <option name="totallyTimeSpent" value="22473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -159,27 +163,21 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/package.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/package.json" />
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="561">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="799">
+          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
         </state>
       </provider>
     </entry>

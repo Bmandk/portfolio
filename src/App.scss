@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700|Source+Sans+Pro');
 
-$navbarcolor: darkred;
+$navbarcolor: white;
+$navbarbgcolor: darkred;
 $navbarhover: #7e0000;
 $projecthovertime: 0.25s;
 
@@ -39,9 +40,24 @@ p {
   text-align: justify;
 }
 
-nav {
-  background-color: $navbarcolor;
-}
+/*.navbar {
+  background-color: $navbarbgcolor;
+  padding: 0;
+  color: $navbarcolor;
+
+  .navbar-brand {
+    color: $navbarcolor;
+  }
+
+  a.nav-link {
+    color: $navbarcolor;
+    padding: 15px;
+
+    &:hover {
+      background-color: $navbarhover;
+    }
+  }
+}*/
 
 /*.navbar {
   margin: 0;

@@ -1,129 +1,166 @@
+import { Content, Container } from './Components'
+import About from './About';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/es/FormControl";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { LinkContainer } from 'react-router-bootstrap'
-
-class NavbarLink extends React.Component {
-    render() {
-        const style = {
-            link: {
-                color: 'white'
-            }
-        };
-        return (
-            <Nav.Item>
-                <LinkContainer to={this.props.link}>
-                    <Nav.Link style={style}>{this.props.text}</Nav.Link>
-                </LinkContainer>
-            </Nav.Item>
-        )
-    }
-}
+import { ProjectOnePiece, ProjectTwoPiece, ProjectGame } from './Project';
+import Projects from './projects'
 
 class MyNavbar extends React.Component {
     render() {
-        const style = {
-            navbar: {
-                backgroundColor: 'darkred'
-            },
-        };
-
         return (
-            /*<Navbar style={style.navbar}>
-                <Container>
-                    <LinkContainer to="/">
-                        <Navbar.Brand>Jonathan Hertz</Navbar.Brand>
-                    </LinkContainer>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Nav>
-                        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                            <NavbarLink link="/" text="Home"/>
-                            <NavbarLink link="/about/" text="About"/>
-                        </Navbar.Collapse>
-                    </Nav>
-                </Container>
-            </Navbar>*/
             <nav className="navbar">
-                <div className="left">
-                </div>
-                <div className="right">
-                </div>
+                <Container>
+                    <Link to="/" className="brand">
+                        Jonathan Hertz
+                    </Link>
+                    <div>
+                        <Link to="/">
+                            Projects
+                        </Link>
+                        <Link to="/about/">
+                            About
+                        </Link>
+                    </div>
+                </Container>
             </nav>
         );
     }
 }
 
 class Frontpage extends React.Component {
-  render() {
-    return (
-        <Content>
-            <h1>Frontpage</h1>
-            <Project/>
-        </Content>
-    );
-  }
-}
+    constructor(props) {
+        super(props);
+        this.state = {
+            projectComponents: []
+        }
+    }
 
-class Content extends React.Component {
+    componentDidMount() {
+
+        var c = Projects.projects.map((project) =>
+            <ProjectThumbnail key={project.directory} name={project.thumbnail.text} img={project.thumbnail.image} link={"/" + project.directory + "/"} />
+        )
+
+        this.setState({
+            projectComponents: c
+        });
+    }
+
     render() {
         return (
-            <Container className="content">
-                {this.props.children}
-            </Container>
+            <Content>
+                <h1>Projects</h1>
+                <div className="projects">
+                    {this.state.projectComponents}
+                </div>
+            </Content>
+        );
+    }
+}
+
+class ProjectThumbnail extends React.Component {
+    render() {
+        return (
+            <div className="project">
+                <Link to={this.props.link}>
+                    <img src={this.props.img} alt="Thumbnail" />
+                    <h2>{this.props.name}</h2>
+                </Link>
+            </div>
+        );
+    }
+}
+
+class Footer extends React.Component {
+    render() {
+        return (
+            <div className="contact">
+                <div>
+                    <h2>Contact</h2>
+                </div>
+                <div>
+                    <p>
+                        Phone: +45 40 16 89 85
+                        <br />
+                        E-mail: jonathan_hertz2@live.dk
+                        <br />
+                        <a className="logo" href="https://twitter.com/Bmandk"><img src="/images/twitter.svg"
+                            alt="Twitter Profile" /></a>
+                        <a className="logo" href="https://www.linkedin.com/in/jonathan-hertz-5221a899/"><img
+                            src="/images/linkedin.png" alt="LinkedIn Profile" /></a>
+                    </p>
+                </div>
+            </div>
         )
     }
 }
 
-class About extends React.Component {
-  render() {
-    return (
-        <Content>
-            <h1>About</h1>
-        </Content>
-    );
-  }
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            routes: []
+        }
+    }
+    
+    getRouteFromJson(project) {
+        return <Route key={project.directory} exact path={"/" + project.directory + "/"} render={(props) => {
+            if (project.type === "twopiece") {
+                return <ProjectTwoPiece json={project} />;
+            }
+            else if (project.type === "onepiece") {
+                return <ProjectOnePiece json={project} />;
+            }
+            else if (project.type === "game") {
+                return <ProjectGame json={project} />
+            }
+        }} />;
+    }
+
+    componentDidMount() {
+        let routes = Projects.projects.map(this.getRouteFromJson);
+
+        /*for (var i = 0; i < Projects.projects.length; i++) {
+            var p = Projects.projects[i];
+            var fileRoutes = p.files.map((file) =>
+                <Route key={p.directory + "/" + file} exact path={"/" + p.directory + "/" + file} component={() => <PDF file={"./projects/" + p.directory + "/" + file} />} />
+            );
+
+            routes = routes.concat(fileRoutes);
+        }
+
+        console.log(routes);
+        */
+        this.setState({
+            routes: routes
+        });
+    }
+
+    render() {
+        return (
+            <Router>
+                <MyNavbar />
+                <Route path="/" exact component={Frontpage} />
+                <Route path="/about/" component={About} />
+                {this.state.routes}
+                <Footer />
+            </Router>
+        );
+    }
 }
 
-class Project extends React.Component {
-  render() {
-    return (
-        <h1>Test</h1>
-    );
-  }
-}
+//function App() {
 
-function App() {
-  return (
-      <Router>
-        <MyNavbar/>
-        {/*<div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about/">About</Link>
-              </li>
-              <li>
-                <Link to="/users/">Users</Link>
-              </li>
-            </ul>
-          </nav>
-
-        </div>*/}
-        <Route path="/" exact component={Frontpage} />
-        <Route path="/about/" component={About} />
-      </Router>
-  );
-}
+//    return (
+//        <Router>
+//            <MyNavbar />
+//            <Route path="/" exact component={Frontpage} />
+//            <Route path="/about/" component={About} />
+//            <Route path="/smadrelandsimulator/" component={() => <Project />} />
+//            <Footer />
+//        </Router>
+//    );
+//}
 
 export default App;

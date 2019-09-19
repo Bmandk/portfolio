@@ -1,10 +1,11 @@
 import { Content, Container } from './Components'
-import About from './About';
+import About from './about/About';
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { ProjectOnePiece, ProjectTwoPiece, ProjectGame } from './Project';
+import { ProjectOnePiece, ProjectTwoPiece, ProjectGame } from './projects/Project';
 import Projects from './projects'
+import Footer from './footer/footer'
 
 class MyNavbar extends React.Component {
     render() {
@@ -69,30 +70,6 @@ class ProjectThumbnail extends React.Component {
                 </Link>
             </div>
         );
-    }
-}
-
-class Footer extends React.Component {
-    render() {
-        return (
-            <div className="contact">
-                <div>
-                    <h2>Contact</h2>
-                </div>
-                <div>
-                    <p>
-                        Phone: +45 40 16 89 85
-                        <br />
-                        E-mail: jonathan_hertz2@live.dk
-                        <br />
-                        <a className="logo" href="https://twitter.com/Bmandk"><img src="/images/twitter.svg"
-                            alt="Twitter Profile" /></a>
-                        <a className="logo" href="https://www.linkedin.com/in/jonathan-hertz-5221a899/"><img
-                            src="/images/linkedin.png" alt="LinkedIn Profile" /></a>
-                    </p>
-                </div>
-            </div>
-        )
     }
 }
 

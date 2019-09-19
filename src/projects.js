@@ -54,7 +54,35 @@ var x = {
                 "gamejson": process.env.PUBLIC_URL + "/projects/vikingrevenge/Build/VikingRevenge.json",
                 "gamejs": process.env.PUBLIC_URL + "/projects/vikingrevenge/Build/UnityLoader.js"
             }
-        }
+        },
+        {
+            "type": "twopiece",
+            "directory": "controller",
+            "thumbnail": {
+                "image": require("./projects/controller/controller.jpg"),
+                "text": "4D Controller"
+            },
+            "page": {
+                "name": "4D Controller (2015)",
+                "markdown": require("./projects/controller/controller.md"),
+                "media1": require("./projects/controller/controllerbleh.jpg"),
+                "media2": require("./projects/controller/controller.mp4")
+            }
+        },
+        {
+            "type": "twopiece",
+            "directory": "wizardsmackdown",
+            "thumbnail": {
+                "image": require("./projects/wizardsmackdown/wizardsmackdown.jpg"),
+                "text": "Wizard Smackdown"
+            },
+            "page": {
+                "name": "Wizard Smackdown (2014)",
+                "markdown": require("./projects/wizardsmackdown/wizardsmackdown.md"),
+                "media1": require("./projects/wizardsmackdown/wizardsmackdown-game.jpg"),
+                "media2": require("./projects/wizardsmackdown/wizardsmackdown.mp4")
+            }
+        },
     ]
 }
 

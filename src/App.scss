@@ -85,7 +85,6 @@ p {
 
 .content ul {
     list-style-type: disc;
-    list-style-position: inside;
 }
 
 .projects {
@@ -186,47 +185,7 @@ p {
 }
 
 .game {
-    position: relative;
-    width: 100%;
-    display: inline-block;
-    background-color: #222c36;
-    margin-bottom: 30px;
-
-    .wrap {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 56.25%;
-
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-    }
-
-    .fullscreen {
-        float: right;
-        z-index: 10;
-        bottom: -35px;
-        right: 20px;
-    }
-
-    img {
-        z-index: 10;
-        margin: auto;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -60%);
-    }
+    height: 56.25%;
 }
 
 .contact {
@@ -269,9 +228,13 @@ p {
 
 @media only screen and (min-width: 768px) {
     .projecttext {
-        & > div {
+        & > div:not(.game):not(.gametext) {
             flex: 1;
             max-width: 47%;
+        }
+
+        .gametext {
+            margin: 50px;
         }
     }
 

@@ -38,7 +38,8 @@ class Frontpage extends React.Component {
     }
 
     componentDidMount() {
-
+        document.title = "Jonathan Hertz Portfolio";
+        
         var c = Projects.projects.map((project) =>
             <ProjectThumbnail key={project.directory} name={project.thumbnail.text} img={project.thumbnail.image} link={"/" + project.directory + "/"} />
         )

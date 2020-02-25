@@ -32,7 +32,7 @@ class ProjectMedia extends React.Component {
     }
 
     render() {
-        if (this.state.type === "png" || this.state.type === "jpg") {
+        if (this.state.type === "png" || this.state.type === "jpg" || this.state.type === "gif") {
             return (
                 <div className={"gameimg"} >
                     <img src={this.props.media} alt="Gameplay" />

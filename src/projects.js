@@ -2,6 +2,20 @@ var x = {
     "projects": [
         {
             "type": "twopiece",
+            "directory": "insidebob",
+            "thumbnail": {
+                "image": require("./projects/insidebob/insidebob.gif"),
+                "text": "Inside Bob"
+            },
+            "page": {
+                "name": "Inside Bob (2019)",
+                "markdown": require("./projects/insidebob/insidebob.md"),
+                "media1": require("./projects/insidebob/insidebob-game.png"),
+                "media2": require("./projects/insidebob/insidebob.gif")
+            }
+        },
+        {
+            "type": "twopiece",
             "directory": "smadreland",
             "thumbnail": {
                 "image": require("./projects/smadreland/smadreland.jpg"),

@@ -55,7 +55,7 @@ var x = {
                 "media2": require("./projects/michelsinnerjourney/michel-game.mp4")
             }
         },
-        {
+        /*{
             "type": "game",
             "directory": "vikingrevenge",
             "thumbnail": {
@@ -68,7 +68,7 @@ var x = {
                 "gamejson": process.env.PUBLIC_URL + "/projects/vikingrevenge/Build/VikingRevenge.json",
                 "gamejs": process.env.PUBLIC_URL + "/projects/vikingrevenge/Build/UnityLoader.js"
             }
-        },
+        },*/
         {
             "type": "twopiece",
             "directory": "controller",

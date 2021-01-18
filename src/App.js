@@ -1,11 +1,13 @@
-import { Content, Container } from './Components'
+import { Content, Container } from './Components';
 import About from './about/About';
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { ProjectOnePiece, ProjectTwoPiece, ProjectGame } from './projects/Project';
-import Projects from './projects'
-import Footer from './footer/footer'
+import Projects from './projects';
+import Footer from './footer/footer';
+import { Blog, BlogEntry } from './blog/Blog';
+import Blogs from './blog/blogs';
 
 class MyNavbar extends React.Component {
     render() {
@@ -18,6 +20,9 @@ class MyNavbar extends React.Component {
                     <div>
                         <Link to="/">
                             Projects
+                        </Link>
+                        <Link to="/blog/">
+                            Blog
                         </Link>
                         <Link to="/about/">
                             About
@@ -78,11 +83,13 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            routes: []
+            projectRoutes: [],
+            blogRoutes: [],
+            test: 'help'
         }
     }
     
-    getRouteFromJson(project) {
+    getProjectRouteFromJson(project) {
         return <Route key={project.directory} exact path={"/" + project.directory + "/"} render={(props) => {
             if (project.type === "twopiece") {
                 return <ProjectTwoPiece json={project} />;
@@ -97,21 +104,20 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        let routes = Projects.projects.map(this.getRouteFromJson);
+        let projectRoutes = Projects.projects.map(this.getProjectRouteFromJson);
 
-        /*for (var i = 0; i < Projects.projects.length; i++) {
-            var p = Projects.projects[i];
-            var fileRoutes = p.files.map((file) =>
-                <Route key={p.directory + "/" + file} exact path={"/" + p.directory + "/" + file} component={() => <PDF file={"./projects/" + p.directory + "/" + file} />} />
-            );
-
-            routes = routes.concat(fileRoutes);
-        }
-
-        console.log(routes);
-        */
         this.setState({
-            routes: routes
+            projectRoutes: projectRoutes
+        });
+
+        let blogRoutes = Blogs.entries.map((blog, index) => {
+            return <Route key={index} exact path={"/blog/" + blog.route} render={(props) => {
+                return <BlogEntry json={blog}/>;
+            }} />;
+        });
+
+        this.setState({
+            blogRoutes: blogRoutes
         });
     }
 
@@ -120,8 +126,10 @@ class App extends React.Component {
             <Router>
                 <MyNavbar />
                 <Route path="/" exact component={Frontpage} />
-                <Route path="/about/" component={About} />
-                {this.state.routes}
+                <Route path="/blog/" exact component={Blog} />
+                <Route path="/about/" exact component={About} />
+                {this.state.projectRoutes}
+                {this.state.blogRoutes}
                 <Footer />
             </Router>
         );

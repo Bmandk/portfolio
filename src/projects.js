@@ -2,6 +2,20 @@ var x = {
     "projects": [
         {
             "type": "twopiece",
+            "directory": "pacha",
+            "thumbnail": {
+                "image": require("./projects/pacha/pacha.png"),
+                "text": "Pacha"
+            },
+            "page": {
+                "name": "Pacha (2020)",
+                "markdown": require("./projects/pacha/pacha.md"),
+                "media1": require("./projects/pacha/pacha.png"),
+                "media2": require("./projects/pacha/pacha.mp4")
+            }
+        },
+        {
+            "type": "twopiece",
             "directory": "insidebob",
             "thumbnail": {
                 "image": require("./projects/insidebob/insidebob.gif"),

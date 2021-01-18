@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Raleway:400,700|Source+Sans+Pro');
 
 $navbarcolor: white;
-$navbarbgcolor: darkred;
+$navbarbgcolor: #8b0000;
 $navbarlinkbghover: #640000;
 $projecthovertime: 0.25s;
 $pagewidth: 992px;
@@ -28,24 +28,25 @@ body, html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bungee', cursive;
+    //font-family: 'Bungee', cursive;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 500;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
 }
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 p {
@@ -80,11 +81,16 @@ p {
 }
 
 .container {
-    margin: 0 30px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-.content ul {
-    list-style-type: disc;
+.content {
+    font-size: 1.3em;
+
+    ul {
+        list-style-type: disc;
+    }
 }
 
 .projects {
@@ -226,6 +232,57 @@ p {
     }
 }
 
+.blog {
+    h1 {
+        text-align: left;
+    }
+
+    .blogThumbnail {
+        padding: 10px 0;
+        a:hover {
+            color: #1982d1;
+        }
+    }
+}
+
+.blogEntry {
+    padding: 10px 0;
+
+    h1 {
+        text-align: left;
+    }
+
+    img {
+        display: block;
+        margin: 30px auto;
+    }
+}
+
+.blog, .blogEntry {
+    max-width: 500px;
+}
+
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid $navbarbgcolor;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.date {
+    font-size: 0.8em;
+}
+
 @media only screen and (min-width: 768px) {
     .projecttext {
         & > div:not(.game):not(.gametext) {
@@ -275,14 +332,14 @@ p {
         margin-top: 30px;
     }
 
-    .container {
+    .container:not(.blog):not(.blogEntry) {
         max-width: calc(768px - 30px);
         margin: auto;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .container {
+    .container:not(.blog):not(.blogEntry) {
         max-width: calc(992px - 30px);
     }
 

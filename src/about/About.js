@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Content } from '../Components'
 import CVPicture from './photo.jpg'
 
@@ -7,7 +7,7 @@ export default class About extends React.Component {
         return (
             <Content className={"about"}>
                 <div id="profilepic">
-                    <img src={CVPicture}/>
+                    <img src={CVPicture} alt='Jonathan'/>
                 </div>
                 <div id="profile">
                     <h3>Game Designer</h3>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Content } from '../Components';
-import ReactMarkdown from 'react-markdown/with-html';
-import Unity, { UnityContent } from 'react-unity-webgl'
-import StartButton from './playbutton.png';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+//import Unity, { UnityContent } from 'react-unity-webgl'
 
 class ProjectContainer extends React.Component {
     render() {
@@ -98,7 +98,7 @@ export class ProjectTwoPiece extends ProjectBase {
                         <ProjectMedia media={media2} />
                     )}
                 </div>
-                <ReactMarkdown source={this.state.markdown} escapeHtml={false} className={"text"} />
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} />
                 {this.state.windowWidth < 768 && (
                     <ProjectMedia media={media2} />
                 )}
@@ -116,7 +116,7 @@ export class ProjectOnePiece extends ProjectBase {
                 {this.state.windowWidth >= 768 && (
                     <ProjectMedia media={media} />
                 )}
-                <ReactMarkdown source={this.state.markdown} escapeHtml={false} className={"text"} />
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} />
                 {this.state.windowWidth < 768 && (
                     <ProjectMedia media={media} />
                 )}
@@ -125,7 +125,7 @@ export class ProjectOnePiece extends ProjectBase {
     }
 }
 
-export class ProjectGame extends ProjectBase {
+/*export class ProjectGame extends ProjectBase {
     constructor(props) {
         super(props);
 
@@ -139,8 +139,8 @@ export class ProjectGame extends ProjectBase {
         return (
             <ProjectContainer name={this.props.json.page.name}>
                 <Unity unityContent={this.unityContent} className={"game"} width="100%" height="541px" />
-                <ReactMarkdown source={this.state.markdown} escapeHtml={false} className={"text gametext"} />
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} />
             </ProjectContainer>
         );
     }
-}
+}*/

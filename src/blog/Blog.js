@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { Content } from "../Components";
 import Blogs from "./blogs";
 import {Link} from "react-router-dom";
-import ReactMarkdown from "react-markdown/with-html";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'rehype-raw';
 
 export class Blog extends Component {
     constructor(props) {
@@ -13,9 +14,7 @@ export class Blog extends Component {
     }
 
     getFirstParagraph(text) {
-        console.log(JSON.stringify(text));
         let t = text.split("\r\n\r\n")[0];
-        console.log(t);
         return t;
     }
 
@@ -92,7 +91,7 @@ export class BlogEntry extends Component {
                 <p className={"date"}>
                     Posted on {this.props.json.date}.
                 </p>
-                <ReactMarkdown source={this.state.markdown} escapeHtml={false} className={"blogText"} />
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"blogText"} />
             </Content>
         );
     }

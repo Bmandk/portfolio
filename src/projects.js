@@ -1,11 +1,24 @@
 var x = {
     "projects": [
         {
+            "type": "onepiece",
+            "directory": "chessapocalypse",
+            "thumbnail": {
+                "image": require("./projects/chessapocalypse/chessapocalypse-logo.png"),
+                "text": "Chess Apocalypse (2021)"
+            },
+            "page": {
+                "name": "Chess Apocalypse (2021)",
+                "markdown": require("./projects/chessapocalypse/chessapocalypse.md"),
+                "media": require("./projects/chessapocalypse/chessapocalypse.jpg"),
+            }
+        },
+        {
             "type": "twopiece",
             "directory": "pacha",
             "thumbnail": {
                 "image": require("./projects/pacha/pacha.png"),
-                "text": "Pacha"
+                "text": "Pacha (2020)"
             },
             "page": {
                 "name": "Pacha (2020)",
@@ -19,7 +32,7 @@ var x = {
             "directory": "insidebob",
             "thumbnail": {
                 "image": require("./projects/insidebob/insidebob.gif"),
-                "text": "Inside Bob"
+                "text": "Inside Bob (2019)"
             },
             "page": {
                 "name": "Inside Bob (2019)",
@@ -33,7 +46,7 @@ var x = {
             "directory": "smadreland",
             "thumbnail": {
                 "image": require("./projects/smadreland/smadreland.jpg"),
-                "text": "Smadreland Simulator"
+                "text": "Smadreland Simulator (2018)"
             },
             "page": {
                 "name": "Smadreland Simulator (2018)",
@@ -47,7 +60,7 @@ var x = {
             "directory": "idleconquest",
             "thumbnail": {
                 "image": require("./projects/idleconquest/idleconquest.jpg"),
-                "text": "IdleConquest"
+                "text": "IdleConquest (2018)"
             },
             "page": {
                 "name": "IdleConquest (2018)",
@@ -60,7 +73,7 @@ var x = {
             "directory": "michelsinnerjourney",
             "thumbnail": {
                 "image": require("./projects/michelsinnerjourney/michel.jpg"),
-                "text": "Michel's Inner Journey"
+                "text": "Michel's Inner Journey (2018)"
             },
             "page": {
                 "name": "Michel's Inner Journey (2018)",
@@ -88,7 +101,7 @@ var x = {
             "directory": "controller",
             "thumbnail": {
                 "image": require("./projects/controller/controller.jpg"),
-                "text": "4D Controller"
+                "text": "4D Controller (2015)"
             },
             "page": {
                 "name": "4D Controller (2015)",
@@ -102,7 +115,7 @@ var x = {
             "directory": "wizardsmackdown",
             "thumbnail": {
                 "image": require("./projects/wizardsmackdown/wizardsmackdown.jpg"),
-                "text": "Wizard Smackdown"
+                "text": "Wizard Smackdown (2014)"
             },
             "page": {
                 "name": "Wizard Smackdown (2014)",

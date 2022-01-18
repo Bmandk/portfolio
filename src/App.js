@@ -2,7 +2,7 @@ import { Content, Container } from './Components';
 import About from './about/About';
 import React from 'react';
 import './App.scss';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { ProjectOnePiece, ProjectTwoPiece, ProjectGame } from './projects/Project';
 import Projects from './projects';
 import Footer from './footer/footer';
@@ -90,17 +90,17 @@ class App extends React.Component {
     }
     
     getProjectRouteFromJson(project) {
-        return <Route key={project.directory} exact path={"/" + project.directory + "/"} render={(props) => {
-            if (project.type === "twopiece") {
-                return <ProjectTwoPiece json={project} />;
-            }
-            else if (project.type === "onepiece") {
-                return <ProjectOnePiece json={project} />;
-            }
-            else if (project.type === "game") {
-                return <ProjectGame json={project} />
-            }
-        }} />;
+        let c = {}
+        if (project.type === "twopiece") {
+            c = <ProjectTwoPiece json={project} />;
+        }
+        else if (project.type === "onepiece") {
+            c = <ProjectOnePiece json={project} />;
+        }
+        else if (project.type === "game") {
+            c = <ProjectGame json={project} />
+        }
+    return <Route key={project.directory} exact path={"/" + project.directory + "/"} element={c} />;
     }
 
     componentDidMount() {
@@ -111,9 +111,7 @@ class App extends React.Component {
         });
 
         let blogRoutes = Blogs.entries.map((blog, index) => {
-            return <Route key={index} exact path={"/blog/" + blog.route} render={(props) => {
-                return <BlogEntry json={blog}/>;
-            }} />;
+            return <Route key={index} exact path={"/blog/" + blog.route} element={<BlogEntry json={blog}/>} />;
         });
 
         this.setState({
@@ -125,28 +123,17 @@ class App extends React.Component {
         return (
             <Router>
                 <MyNavbar />
-                <Route path="/" exact component={Frontpage} />
-                <Route path="/blog/" exact component={Blog} />
-                <Route path="/about/" exact component={About} />
-                {this.state.projectRoutes}
-                {this.state.blogRoutes}
+                <Routes>
+                    <Route path="/" exact element={<Frontpage />} />
+                    <Route path="/blog/" exact element={<Blog />} />
+                    <Route path="/about/" exact element={<About />} />
+                    {this.state.projectRoutes}
+                    {this.state.blogRoutes}
+                </Routes>
                 <Footer />
             </Router>
         );
     }
 }
-
-//function App() {
-
-//    return (
-//        <Router>
-//            <MyNavbar />
-//            <Route path="/" exact component={Frontpage} />
-//            <Route path="/about/" component={About} />
-//            <Route path="/smadrelandsimulator/" component={() => <Project />} />
-//            <Footer />
-//        </Router>
-//    );
-//}
 
 export default App;

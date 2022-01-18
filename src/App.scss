@@ -45,8 +45,8 @@ h3 {
 }
 
 a {
-    text-decoration: none;
-    color: #333;
+    text-decoration: underline;
+    color: #1982d1;
 }
 
 p {
@@ -71,6 +71,7 @@ p {
     }
 
     a {
+        text-decoration: none;
         color: white;
         padding: 15px;
 
@@ -96,12 +97,12 @@ p {
 .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .project {
         flex-basis: 100%;
         position: relative;
         padding: 6px 30px;
-        margin: auto;
         z-index: 0;
         @include transition(z-index $projecthovertime, transform $projecthovertime);
         transform: scale(1);
@@ -281,6 +282,10 @@ code {
 
 .date {
     font-size: 0.8em;
+}
+
+ul {
+    list-style-position: inside;
 }
 
 @media only screen and (min-width: 768px) {

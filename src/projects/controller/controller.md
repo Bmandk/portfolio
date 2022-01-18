@@ -1,8 +1,13 @@
+* Programming
+* Hardware Design and Production
+
+**Game Description**  
 The 4D Controller was an attempt to add more modalities to the interaction with screens. It was made
 as a group exam project with 2 classmates for a hardware course. We designed and produced the PCB
 from scratch,
 soldering components and writing the code for it.
 
+**Project Description**  
 My responsibilities was PCB production and programming. We used an Arduino Uno together with our own
 PCB to mount the various components. The starting point for the design was the standard PlayStation
 2 DualShock controller. This means it had the same layout with buttons and analog sticks. Then we
@@ -16,6 +21,3 @@ had were not strong enough to achieve this effect, but it still worked well for 
 The controller attached to a computer was able to interact with Unity with a USB connection. The
 application we built was only a demo to showcase that it worked. With more development, it would be
 possible to make a driver and a library that developers can use to use the controller in a project.
-
-* Programming
-* Hardware Design and Production

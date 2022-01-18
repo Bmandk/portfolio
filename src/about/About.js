@@ -27,20 +27,20 @@ export default class About extends React.Component {
                         enjoy snowboarding when possible.
                     </p>
                     <div id="cv">
-                        <a href="/about/CV Jonathan Hertz.pdf">Download PDF version of my CV here</a>
+                        <a href="/about/Resume Jonathan Hertz.pdf">Get PDF version of my resume here</a>
                         <h5>Jobs</h5>
                         <ul>
-                            <li>QA Student Worker, Unity Technologies - 2020-Current</li>
+                            <li>QA Student Worker, Unity Technologies - 2020-2021</li>
+                            <li>Lead Game Designer for <a href="/#/pacha">Pacha</a>, DADIU - 2020 Fall</li>
                             <li>Teaching Assistant, IT-University of Copenhagen - 2018-2020</li>
-                            <li>Volunteer at Coding Pirates - Teaching kids programming - 2017-2018</li>
+                            <li>Volunteer at Coding Pirates - Teaching kids programming - 2017-2018</li>ya
                             <li>Board Member, ITU Innovators - 2016-2017</li>
                             <li>Tournament Organizer, ITU LAN - 2016-2017</li>
-                            <li>Barista, KU.BE - October 2016-2017</li>
                             <li>Student worker, SDC - 2015-2016</li>
                         </ul>
                         <h5>Education</h5>
                         <ul>
-                            <li>MSc. Games (Design), IT-University of Copenhagen - 2019-Current</li>
+                            <li>MSc. Games (Design), IT-University of Copenhagen - 2019-2021</li>
                             <li>BSc. Digital Media and Design, IT-Universitetet - 2016-2019</li>
                             <li>GameIT College, Grenå Higher Technical Exam - 2012-2015</li>
                         </ul>

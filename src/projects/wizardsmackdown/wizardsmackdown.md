@@ -1,9 +1,15 @@
+* Gameplay Design
+* Gameplay Programmer
+* Balancing and playtesting
+
+**Game Description**  
 Wizard Smackdown was the first bigger game project I was a part of. The game was developed while
 on exchange in Seattle, USA in October 2014. The game involves 2 wizards fighting each other on top
 of a
 very high pillar. To win you can use your spells to drain the opponent's health or push him
 to the edge of the pillar.
 
+**Project Description**  
 The game was originally inspired after a Warcraft 3 mod called "Warlock". We had all enjoyed playing
 it together, so we set out to recreate that. Creating a party game was also very feasible within the
 month, as it doesn't require intricate systems or big levels/worlds for players to have fun with the
@@ -24,8 +30,5 @@ To organize the work, we used Scrum to make sure right tasks were done in time. 
 resulted in having a game that was finished without having to crunch. As part of the project,
 we were also required to make a <a href="https://www.kickstarter.com/projects/959559550/1035666030?token=30f776e9">Kickstarter which can be found here</a>.
 
-* Gameplay Design
-* Gameplay Programmer
-* Balancing and playtesting
-
+**How To Get It**  
 The game can be downloaded <a href="/projects/wizardsmackdown/WizardSmackdown.rar">here</a> and requires 2 controllers.

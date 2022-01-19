@@ -4,6 +4,7 @@
         "exclude": ["/static/media/*", "/static/css/*"]
     },
     "mimeTypes": {
-        ".json": "text/json"
+        ".json": "text/json",
+        ".mp4": "video/mp4"
     }
 }

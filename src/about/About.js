@@ -34,7 +34,7 @@ export default class About extends React.Component {
                             <li>QA Student Worker, Unity Technologies - 2020-2021</li>
                             <li>Lead Game Designer for <a href="/#/pacha">Pacha</a>, DADIU - 2020 Fall</li>
                             <li>Teaching Assistant, IT-University of Copenhagen - 2018-2020</li>
-                            <li>Volunteer, Coding Pirates - 2017-2018</li>ya
+                            <li>Volunteer, Coding Pirates - 2017-2018</li>
                             <li>Board Member, ITU Innovators - 2016-2017</li>
                             <li>Tournament Organizer, ITU LAN - 2016-2017</li>
                             <li>Student worker, SDC - 2015-2016</li>

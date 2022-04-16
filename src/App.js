@@ -21,9 +21,9 @@ class MyNavbar extends React.Component {
                         <Link to="/">
                             Projects
                         </Link>
-                        <Link to="/blog/">
+                        {/* <Link to="/blog/">
                             Blog
-                        </Link>
+                        </Link> */}
                         <Link to="/about/">
                             About
                         </Link>

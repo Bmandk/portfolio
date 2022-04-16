@@ -23,17 +23,18 @@ export default class About extends React.Component {
                         designer.
                     </p>
                     <p>
-                        In my spare time, I play guitar and piano, hang with friends, watch mostly drama movies and series, and
+                        In my spare time, I make games, play guitar and piano, hang with friends, and
                         enjoy snowboarding when possible.
                     </p>
                     <div id="cv">
                         <a href="/about/Resume Jonathan Hertz.pdf">Get PDF version of my resume here</a>
                         <h5>Jobs</h5>
                         <ul>
+                            <li>Associate Software Developer, IBM Client Innovation Center - 2021-Current</li>
                             <li>QA Student Worker, Unity Technologies - 2020-2021</li>
                             <li>Lead Game Designer for <a href="/#/pacha">Pacha</a>, DADIU - 2020 Fall</li>
                             <li>Teaching Assistant, IT-University of Copenhagen - 2018-2020</li>
-                            <li>Volunteer at Coding Pirates - Teaching kids programming - 2017-2018</li>ya
+                            <li>Volunteer, Coding Pirates - 2017-2018</li>ya
                             <li>Board Member, ITU Innovators - 2016-2017</li>
                             <li>Tournament Organizer, ITU LAN - 2016-2017</li>
                             <li>Student worker, SDC - 2015-2016</li>

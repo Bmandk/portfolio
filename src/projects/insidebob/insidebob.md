@@ -16,5 +16,5 @@ Producing this game was an exercise in teamwork, considering the vast difference
 backgrounds each member brought to the team. 
 
 **How To Get It**  
-The game can be downloaded <a href="/projects/insidebob/Inside Bob.zip">here</a> and is
+The game can be downloaded <a href="https://drive.google.com/file/d/1zU2Qn-OXSYOLJThX91x_1HAx_u11a3SD/view?usp=share_link">here</a> and is
 played with a (XBox One) controller. Included is windows and mac builds, along with a presskit.

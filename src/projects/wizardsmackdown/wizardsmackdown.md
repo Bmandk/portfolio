@@ -32,4 +32,4 @@ resulted in having a game that was finished without having to crunch. As part of
 we were also required to make a <a href="https://www.kickstarter.com/projects/959559550/1035666030?token=30f776e9">Kickstarter which can be found here</a>.
 
 **How To Get It**  
-The game can be downloaded <a href="/projects/wizardsmackdown/WizardSmackdown.rar">here</a> and requires 2 controllers.
+The game can be downloaded <a href="https://drive.google.com/file/d/1D1j968aL6N82QP-bH3XHqDMtjcybxoL4/view?usp=share_link">here</a> and requires 2 controllers.

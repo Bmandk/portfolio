@@ -11,7 +11,7 @@ cutting down all the trees. You must stop them, and in the process become strong
 Pacha can burrow into the ground, and then launch into the to overcome various obstacles.
 
 **Project Description**  
-Pacha was made by 17 people in six weeks while attending <a href="http://www.dadiu.dk/">DADIU</a>.
+Pacha was made by 17 people in seven weeks while attending <a href="http://www.dadiu.dk/">DADIU</a>.
 We were a brand new team, having no experience as a team before. What I learned most
 from this project was teamwork, having to work with other game designers, programmers,
 a sound designer, quality assurance/user researchers, an art director, a game director,
@@ -20,9 +20,7 @@ to design and communicate the game design. Since I was also the lead, I had also
 to have an overview of the other game designers, making sure we were doing the right
 tasks, communicating a lot with the other departments, and generally keeping track of the overall design.
 
-<video controls style="margin: 10px;">
-    <source src="/projects/pacha/pacha-trailer.mp4" type="video/mp4" />
-</video>
+<iframe type="text/html" src="https://www.youtube.com/embed/8vcTuwoZres" frameborder="0" style="width: 100%; aspect-ratio: 16 / 9; margin: 10px;"></iframe>
 
 **Design Process**  
 Development started out with a pre-production phase. The game director Lukas decided that Princess Mononoke and A Short Hike 
@@ -45,11 +43,9 @@ The team was then able to use this to create the basics of the game. 3D artists 
 I created prototypes early on, which showed the burrowing mechanic. As this was how the player was going to be moving around,
 that is where we focused our attentions first. Below is a video of the prototypes, along with the final version of the game.
 
-<video controls style="margin: 10px;">
-    <source src="/projects/pacha/prototypes.mp4" type="video/mp4" />
-</video>
+<iframe type="text/html" src="https://www.youtube.com/embed/RujLC5bI76o" frameborder="0" style="width: 100%; aspect-ratio: 16 / 9; margin: 10px;"></iframe>
 
-After the second prototype, we decided to focus completely on the burrowing mechanic and drop other ideas we had outlined in the original design, such as stealth and more in-depth combat abilities. The prototypes showed that the burrowing mechanic by itself was enough to be engaging to players. Players would play with them for quite a bit longer than first anticipated. Another reason for cutting the other mechanics was because of scope. Since we only had 6 weeks for this game, we decided to focus more on this single mechanic instead.
+After the second prototype, we decided to focus completely on the burrowing mechanic and drop other ideas we had outlined in the original design, such as stealth and more in-depth combat abilities. The prototypes showed that the burrowing mechanic by itself was enough to be engaging to players. Players would play with them for quite a bit longer than first anticipated. Another reason for cutting the other mechanics was because of scope. Since we only had seven weeks for this game, we decided to focus more on this single mechanic instead.
 That resulted in the following revised version of the one-pager. 
 
 ![Revised one-pager](/projects/pacha/revised-one-pager.png)
@@ -66,6 +62,4 @@ By working with The Attic to create Pacha, I learned a lot about game design, it
 **How To Get It**  
 The game can be downloaded <a href="https://dadiu.itch.io/pacha">on itch here</a>. The game supports both controller and mouse/keyboard, although controller is recommended.
 
-<video controls style="margin: 10px;">
-    <source src="/projects/pacha/pacha-makingof.mp4" type="video/mp4" />
-</video>
+<iframe type="text/html" src="https://www.youtube.com/embed/lJq0bsugQuU" frameborder="0" style="width: 100%; aspect-ratio: 16 / 9; margin: 10px;"></iframe>

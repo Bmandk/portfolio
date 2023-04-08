@@ -65,3 +65,7 @@ By working with The Attic to create Pacha, I learned a lot about game design, it
 
 **How To Get It**  
 The game can be downloaded <a href="https://dadiu.itch.io/pacha">on itch here</a>. The game supports both controller and mouse/keyboard, although controller is recommended.
+
+<video controls style="margin: 10px;">
+    <source src="/projects/pacha/pacha-makingof.mp4" type="video/mp4" />
+</video>

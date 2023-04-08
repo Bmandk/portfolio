@@ -3,7 +3,7 @@ import About from './about/About';
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { ProjectOnePiece, ProjectTwoPiece/*, ProjectGame*/ } from './projects/Project';
+import { ProjectOnePiece, ProjectSingleColumn, ProjectTwoPiece/*, ProjectGame*/ } from './projects/Project';
 import Projects from './projects';
 import Footer from './footer/footer';
 import { Blog, BlogEntry } from './blog/Blog';
@@ -100,6 +100,9 @@ class App extends React.Component {
         /*else if (project.type === "game") {
             c = <ProjectGame json={project} />
         }*/
+        else if (project.type === "singlecolumn") {
+            c = <ProjectSingleColumn json={project} />
+        }
     return <Route key={project.directory} exact path={"/" + project.directory + "/"} element={c} />;
     }
 

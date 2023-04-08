@@ -1,3 +1,4 @@
+**Roles**
 * One-man project
 * Game Designer
 * Programmer

@@ -1,3 +1,4 @@
+**Roles**
 * Project Manager
 * Gameplay Designer
 * Gameplay Programmer

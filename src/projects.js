@@ -14,19 +14,31 @@ var x = {
             }
         },
         {
-            "type": "twopiece",
+            "type": "singlecolumn",
             "directory": "pacha",
             "thumbnail": {
-                "image": require("./projects/pacha/pacha.png"),
+                "image": "/projects/pacha/pacha.png",
                 "text": "Pacha (2020)"
             },
             "page": {
                 "name": "Pacha (2020)",
-                "markdown": require("./projects/pacha/pacha.md"),
-                "media1": require("./projects/pacha/pacha.png"),
-                "media2": require("./projects/pacha/pacha.mp4")
+                "markdown": require("./projects/pacha/pacha.md")
             }
         },
+        /*{
+            "type": "twopiece",
+            "directory": "pacha_copy",
+            "thumbnail": {
+                "image": require("./projects/pacha_copy/pacha.png"),
+                "text": "Pacha_copy (2020)"
+            },
+            "page": {
+                "name": "Pacha (2020)",
+                "markdown": require("./projects/pacha_copy/pacha.md"),
+                "media1": require("./projects/pacha_copy/pacha.png"),
+                "media2": require("./projects/pacha_copy/pacha.mp4")
+            }
+        },*/
         {
             "type": "twopiece",
             "directory": "insidebob",

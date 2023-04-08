@@ -30,7 +30,8 @@ export default class About extends React.Component {
                         <a href="/about/Resume Jonathan Hertz.pdf">Get PDF version of my resume here</a>
                         <h5>Jobs</h5>
                         <ul>
-                            <li>Associate Software Developer, IBM Client Innovation Center - 2021-Current</li>
+                            <li>Software Developer in Quality, Unity Technologies - 2022-Current</li>
+                            <li>Associate Software Developer, IBM Client Innovation Center - 2021-2022</li>
                             <li>QA Student Worker, Unity Technologies - 2020-2021</li>
                             <li>Lead Game Designer for <a href="/#/pacha">Pacha</a>, DADIU - 2020 Fall</li>
                             <li>Teaching Assistant, IT-University of Copenhagen - 2018-2020</li>

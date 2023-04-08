@@ -6,6 +6,7 @@ Since I am not an artist by trade, I decided to go with pixel art. While it is n
 (by far), to me it was a lot easier to make something mediocre and recognizable than with a higher
 resolution.
 
+**Roles**
 * Everything!
 * Programming
 * Design

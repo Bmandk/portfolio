@@ -98,7 +98,7 @@ export class ProjectTwoPiece extends ProjectBase {
                         <ProjectMedia media={media2} />
                     )}
                 </div>
-                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} />
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} style={{flexGrow: 1}} />
                 {this.state.windowWidth < 768 && (
                     <ProjectMedia media={media2} />
                 )}
@@ -120,6 +120,18 @@ export class ProjectOnePiece extends ProjectBase {
                 {this.state.windowWidth < 768 && (
                     <ProjectMedia media={media} />
                 )}
+            </ProjectContainer>
+        );
+    }
+}
+
+export class ProjectSingleColumn extends ProjectBase {
+    render() {
+        const media = this.props.json.page.media;
+
+        return (
+            <ProjectContainer name={this.props.json.page.name}>
+                <ReactMarkdown children={this.state.markdown} rehypePlugins={[rehypeRaw]} className={"text"} />
             </ProjectContainer>
         );
     }

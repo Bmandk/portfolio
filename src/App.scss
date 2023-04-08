@@ -209,10 +209,14 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .gameimg {
+    /*.gameimg {
         img {
             max-width: 100%;
         }
+    }*/
+
+    img, video {
+        max-width: 100%;
     }
 
     .vid {
@@ -224,12 +228,7 @@ p {
     }
 
     ul {
-        font-weight: bold;
         margin-bottom: 1em;
-
-        &:before {
-            content: "Roles:";
-        }
     }
 }
 
@@ -292,7 +291,8 @@ ul {
     .projecttext {
         & > div:not(.game):not(.gametext) {
             flex: 1;
-            max-width: 47%;
+            //max-width: 47%;
+            margin: 0 20px;
         }
 
         .gametext {
